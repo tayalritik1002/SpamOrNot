@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpamOrNot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: #113f67;
+
+            height: 4rem;
+
+
+
+            /* align-items: baseline; */
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 1rem;
+            /* additional */
+        }
+
+        .nav a {
+            color: aliceblue;
+            text-decoration: none;
+
+        }
+
+        .nav a:hover {
+            color: lightblue;
+        }
+
+        .nav a:active {
+            background-color: rgb(42, 129, 129);
+        }
+
+        body {
+            background-color: #e7eaf6;
+
+        }
+
+        /* .active {
+            background-color: rgb(173, 173, 255);
+        } */
+
+        .gradient-custom {
+            /* fallback for old browsers */
+            background: #6a11cb;
+
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+        }
+
+        h1 {
+            color: rgb(16, 18, 18);
+            text-align: center;
+            margin-top: 1rem;
+            gap: 20px;
+        }
+
+        .home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 60vh;
+        }
+
+        .home2 {
+            width: 40%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 30px;
+            justify-content: flex-start;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .home2 h3 {
+            font-size: xx-large;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+
+        .home2 a {
+            color: white;
+            font-size: large;
+            font-weight: bold;
+            margin-top: 2rem;
+            text-decoration: none;
+
+
+        }
+
+        .btn {
+            background: #14dd9d;
+            cursor: pointer;
+            border-radius: 20px;
+            border: none;
+            padding: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 3rem;
+
+        }
+
+        .btn:hover {
+            background: #3fffbf;
+        }
+
+        /* footer */
+        #footer {
+            margin-top: 3rem;
+            background: #38598b;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+            padding: 30px 0;
+            height: 100%;
+        }
+
+        #footer h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            font-family: "Poppins", sans-serif;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+
+        #footer p {
+            font-size: 15;
+            font-style: italic;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+
+
+
+        #footer .copyright {
+            margin: 0 0 5px 0;
+        }
+
+        #footer .credits {
+            font-size: 13px;
+        }
+
+        /* add contact */
+        
+    .box {
+      width: 720px;
+      height: 500px;
+      margin: 50px auto;
+      padding: 45px 65px;
+    }
+
+    .card {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #fff;
+      border-radius: 40px;
+      padding: 25px;
+      justify-content: flex-start;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+      height: 35px;
+      border-radius: 20px;
+      border: none;
+      background: #f2f2f2;
+      padding: 10px;
+      font-size: 14px;
+      position: relative;
+      
+    }
+    select{
+        border-radius: 5px;
+        background-color: #38598b;
+        color: #e7eaf6;
+    }
+    .btn{
+        background: #090c0a;
+      color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  
+    }
+.btn:hover {
+  background: #616262;
+}
+
+/* search */
+.box1 {
+      width: 720px;
+      height: 500px;
+      margin: 50px auto;
+      padding: 40px 50px;
+    }
+.card1 {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 40px;
+      padding: 20px;
+      gap: 3rem;
+      justify-content: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      
+    }
+    .left{
+        border-right: 3.5px solid black;
+        padding-right: 3rem;
+   
+    }
+    .search{
+        text-align: center;
+        margin-bottom: 4px;
+    }
+    .btn2{
+      background: #090c0a;
+      color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  
+    }
+.btn2:hover {
+  background: #616262;
+}
+/* info */
+ .info{
+     display:flex ;
+     margin-top: 1rem;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: auto 0;
+ }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="nav">
+
+            <a href="{% url 'home' %}">
+                <h2>SpamOrNot</h2>
+            </a> &emsp13;
+            <a href="{% url 'addcontact' %}">
+                <h3>AddSpamContact</h3>
+            </a>
+            <a href="{% url 'search' %}">
+                <h3>SearchContact</h3>
+            </a>
+            <div>
+                <a href="">
+                    <h3>SignOut</h3>
+                </a>
+            </div>
+        </div>
+
+
+
+    </div>

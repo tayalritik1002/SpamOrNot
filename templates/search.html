@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{{ name }} 
+{{ number }}
+{{ likelihood }}
+{{ message }}
+
+<div class="box1">
+    <div class="card1">
+       <div class="left">
+        <form method="post" action="searchbyphone">
+            {% csrf_token %}
+            <p class="search">search by <b>phone_number</b></p>
+            <input type="text", name="phone_number">
+            <input  class="btn2" type="submit" placeholder="search">
+        </form>
+       </div>
+       <div class="right">
+        <form method="post" action="searchbyname">
+            {% csrf_token %}
+            <p class="search">search by <b>name</b></p>
+            <input type="text" name="name">
+            <input  class="btn2" type="submit" placeholder="search">
+        </form>
+       </div>
+        
+    </div>
+</div>
+
+{% endblock %}
